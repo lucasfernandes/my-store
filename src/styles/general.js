@@ -5,7 +5,7 @@ import colors from './colors';
 const general = {
   safeArea: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.white,
   },
 
   container: {
