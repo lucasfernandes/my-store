@@ -9,8 +9,8 @@ import TabItem from './components/TabItem';
 import styles from './styles';
 
 const tabs = [
-  { index: 0, icon: 'home' },
-  { index: 1, icon: 'shopping-cart' },
+  { index: 0, icon: 'home', badge: 0 },
+  { index: 1, icon: 'shopping-cart', badge: 10 },
 ];
 
 const NavigationTabs = ({ navigationState, jumpToIndex }) => (
@@ -21,6 +21,7 @@ const NavigationTabs = ({ navigationState, jumpToIndex }) => (
         icon={tab.icon}
         active={(tab.index === navigationState.index)}
         onPress={() => jumpToIndex(tab.index)}
+        badge={tab.badge}
       />
     ))}
   </View>

@@ -18,7 +18,6 @@
     "reactotron-redux": "^1.13.0",
     "reactotron-redux-saga": "^1.13.0",
     "redux": "^3.7.2",
-    "redux-batched-actions": "^0.1.6",
     "redux-persist": "^5.4.0",
     "redux-saga": "^0.16.0",
     "reduxsauce": "^0.7.0"
