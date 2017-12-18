@@ -1,100 +1,95 @@
 /* Core */
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 /* Presentational */
-import { View, Image, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Image, Text, TextInput, TouchableOpacity, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+/* Redux */
+import { connect } from 'react-redux';
+import CartActions from 'store/ducks/cart';
 
 import styles from './styles';
 
-const CartListItem = ({
-  cartListItem: { image, name, brand, price }
-}) => (
-  <View style={styles.listContainer}>
-    <Image
-      style={styles.image}
-      source={{ uri: image }}
-    />
+export class CartListItem extends Component {
+  static propTypes = {
+    cartListItem: PropTypes.shape({
+      id: PropTypes.string,
+      product: PropTypes.shape({
+        image: PropTypes.string,
+        name: PropTypes.string,
+        brand: PropTypes.string,
+        price: PropTypes.number,
+      }),
+      amount: PropTypes.number,
+    }),
+    removeFromCart: PropTypes.func.isRequired,
+    updateProductAmount: PropTypes.func.isRequired,
+  };
 
-    <View style={styles.textContainer}>
-      <Text style={styles.title}>{name}</Text>
-      <Text style={styles.brand}>{brand}</Text>
-      <Text style={styles.price}>
-        {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price)}
-      </Text>
-    </View>
+  static defaultProps = {
+    cartListItem: [],
+  };
 
-    <View style={styles.right}>
-      <TextInput
-        style={styles.textInput}
-        underlineColorAndroid="transparent"
-        maxLength={2}
-        defaultValue="1"
-      />
-      <TouchableOpacity
-        activeOpacity={0.6}
-        onPress={() => {}}
-      >
-        <Icon name="times" size={20} color="#999999" />
-      </TouchableOpacity>
-    </View>
-  </View>
-);
+  handleInputChange = (amount) => {
+    if (/^\d+$/.test(amount)) {
+      this.props.updateProductAmount(this.props.cartListItem.id, parseInt(amount, 10));
+    }
+  }
 
-export default CartListItem;
+  render() {
+    const {
+      cartListItem: {
+        id, amount, product: {
+          image, name, brand, price,
+        },
+      },
+    } = this.props;
 
+    return (
+      <View style={styles.listContainer}>
+        <Image
+          style={styles.image}
+          source={{ uri: image }}
+        />
 
-// /* Core */
-// import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{name}</Text>
+          <Text style={styles.brand}>{brand}</Text>
+          <Text style={styles.price}>
+            {
+              Platform.OS === 'ios'
+                ? new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price)
+                : `R$${price.toFixed(2)}`
+            }
+          </Text>
+        </View>
 
-// /* Presentational */
-// import { View, Text, TouchableOpacity } from 'react-native';
+        <View style={styles.right}>
+          <TextInput
+            style={styles.textInput}
+            underlineColorAndroid="transparent"
+            maxLength={3}
+            defaultValue={amount.toString()}
+            keyboardType="numeric"
+            onChangeText={this.handleInputChange}
+          />
+          <TouchableOpacity
+            activeOpacity={0.6}
+            onPress={() => this.props.removeFromCart(id)}
+          >
+            <Icon name="times" size={20} color="#999999" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+}
 
-// /* Redux */
-// import { connect } from 'react-redux';
-// import CategoriesActions from 'store/ducks/categories';
-// import CategoryProductsActions from 'store/ducks/categoryProducts';
+const mapDispatchToProps = dispatch => ({
+  removeFromCart: id => dispatch(CartActions.cartRemoveFromCart(id)),
+  updateProductAmount: (id, amount) => dispatch(CartActions.cartUpdateProductAmount(id, amount)),
+});
 
-// import styles from './styles';
-
-// export class CartListItem extends Component {
-//   static propTypes = {
-//     category: PropTypes.shape({
-//       id: PropTypes.number,
-//       title: PropTypes.string,
-//     }).isRequired,
-//     active: PropTypes.bool.isRequired,
-//     setActiveCategory: PropTypes.func.isRequired,
-//     categoryProductsRequest: PropTypes.func.isRequired,
-//   };
-
-//   setActiveCategory = (category) => {
-//     this.props.setActiveCategory(category);
-//     this.props.categoryProductsRequest(category);
-//   }
-
-//   render() {
-//     const { category: { id, title }, active } = this.props;
-//     return (
-//       <View style={[styles.category, active ? styles['category-active'] : {}]}>
-//         <TouchableOpacity
-//           onPress={() => this.setActiveCategory(id)}
-//           style={styles.button}
-//         >
-//           <Text style={[styles.title, active ? styles['title-active'] : {}]}>{title.toUpperCase()}</Text>
-//         </TouchableOpacity>
-//       </View>
-//     );
-//   }
-// }
-
-// const mapDispatchToProps = dispatch => ({
-//   setActiveCategory: category => dispatch(CategoriesActions.categoriesSetActiveCategory(category)),
-//   categoryProductsRequest: category =>
-//     dispatch(CategoryProductsActions.categoryProductsRequest(category)),
-// });
-
-
-// export default connect(null, mapDispatchToProps)(CartListItem);
-
+export default connect(null, mapDispatchToProps)(CartListItem);

@@ -13,7 +13,7 @@ const TabItem = ({
   icon,
   onPress,
   active,
-  badge,
+  badges,
 }) => (
 
   <TouchableOpacity
@@ -21,9 +21,8 @@ const TabItem = ({
     onPress={onPress}
     activeOpacity={0.6}
   >
-    <Icon name={icon} size={20} style={active ? styles.activeIcon : styles.inactiveIcon}>
-      { badge > 0 && <Badge value={badge} /> }
-    </Icon>
+    <Icon name={icon} size={20} style={active ? styles.activeIcon : styles.inactiveIcon} />
+    { badges > 0 && <Badge value={badges} /> }
   </TouchableOpacity>
 );
 
@@ -31,11 +30,11 @@ TabItem.propTypes = {
   icon: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
   active: PropTypes.bool.isRequired,
-  badge: PropTypes.number,
+  badges: PropTypes.number,
 };
 
 TabItem.defaultProps = {
-  badge: 0,
+  badges: 0,
 };
 
 export default TabItem;

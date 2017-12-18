@@ -24,8 +24,6 @@ class Header extends Component {
     backEnabled: false,
   };
 
-  static state = {}
-
   navigateBack = () => {
     const { dispatch } = this.props;
 
@@ -41,13 +39,11 @@ class Header extends Component {
               <Icon name="angle-left" size={20} color="#999999" />
             </TouchableOpacity> }
         </View>
-
         <Text style={styles.title}>{this.props.title}</Text>
         <View style={styles.rightHidden} />
       </View>
     );
   }
 }
-
 
 export default connect()(Header);

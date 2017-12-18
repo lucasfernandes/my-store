@@ -4,8 +4,8 @@ import { colors } from 'styles';
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    bottom: 10,
-    left: 10,
+    top: 12,
+    left: 94,
     backgroundColor: colors.green,
     borderRadius: 9,
     justifyContent: 'center',

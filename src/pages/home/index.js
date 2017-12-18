@@ -8,7 +8,6 @@ import Header from 'components/Header';
 import Categories from 'pages/home/components/Categories';
 import Products from 'pages/home/components/Products';
 
-
 /* Redux */
 import { connect } from 'react-redux';
 import CategoriesActions from 'store/ducks/categories';
@@ -51,7 +50,7 @@ class Home extends Component {
         <Header title="Minha Loja" />
         <Categories categories={this.props.categories.data} active={this.props.categories.active} />
         { this.props.categoryProducts.loading
-            ? <ActivityIndicator size="large" color={colors.green} />
+            ? <ActivityIndicator size="large" color={colors.darker} style={styles.loading} />
             : <Products categoryID={categoryID} products={products} /> }
       </View>
     );

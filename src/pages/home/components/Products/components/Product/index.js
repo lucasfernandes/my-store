@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 /* Presentational */
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { View, Image, Text, TouchableOpacity, Platform } from 'react-native';
 
 /* Redux */
 import { connect } from 'react-redux';
@@ -13,7 +13,7 @@ import styles from './styles';
 
 export class Product extends Component {
   static propTypes = {
-    categoryID: PropTypes.number.isRequired,
+    mixedID: PropTypes.string.isRequired,
     product: PropTypes.shape({
       image: PropTypes.string,
       name: PropTypes.string,
@@ -23,20 +23,20 @@ export class Product extends Component {
     dispatch: PropTypes.func.isRequired,
   };
 
-  static state = {}
-
   navigateToDetail = () => {
-    const { categoryID, product, dispatch } = this.props;
+    const { mixedID, product, dispatch } = this.props;
 
     return dispatch(NavigationActions.navigate({
       routeName: 'Detail',
-      params: { categoryID, product },
+      params: { mixedID, product },
     }));
   }
 
   render() {
     const { product } = this.props;
-    const formatedPrice = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(product.price);
+    const formatedPrice = Platform.OS === 'ios'
+      ? new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(product.price)
+      : `R$${product.price.toFixed(2)}`;
 
     return (
       <TouchableOpacity

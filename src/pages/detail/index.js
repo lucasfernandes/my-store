@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 /* Presentational */
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, Platform } from 'react-native';
 
 /* Redux */
 import { connect } from 'react-redux';
@@ -11,49 +11,50 @@ import CartActions from 'store/ducks/cart';
 
 import Header from 'components/Header';
 import { Product } from 'pages/home/components/Products/components/Product';
+import CartList from 'pages/cart/components/CartList';
+
 import styles from './styles';
 import Button from './components/Button';
 
-export class Detail extends Component {
+class Detail extends Component {
   static propTypes = {
     navigation: PropTypes.shape({
       state: PropTypes.shape({
         params: PropTypes.shape({
-          categoryID: PropTypes.number,
+          mixedID: PropTypes.string,
           product: Product.propTypes.product,
         }),
       }),
     }).isRequired,
     cart: PropTypes.shape({
-      // data:
+      data: CartList.propTypes.cartListItem,
     }).isRequired,
     addToCart: PropTypes.func.isRequired,
     removeFromCart: PropTypes.func.isRequired,
   };
 
   toogleItemCart = () => {
-    const { categoryID, product } = this.props.navigation.state.params;
-    const added = this.checkIsAdded(categoryID, product.id, this.props.cart.data);
+    const { mixedID, product } = this.props.navigation.state.params;
 
+    const added = this.checkIsAdded(mixedID, this.props.cart.data);
     if (added) {
-      this.props.removeFromCart(categoryID, product.id);
+      this.props.removeFromCart(mixedID);
     } else {
-      this.props.addToCart(categoryID, product.id);
+      this.props.addToCart(mixedID, product);
     }
   }
 
-  checkIsAdded = (categoryID, productID, data) => (
-    data.some(item =>
-      item.categoryID === categoryID && item.productID === productID)
+  checkIsAdded = (id, data) => (
+    data.some(item => item.id === id)
   );
 
-
   render() {
-    const { categoryID, product } = this.props.navigation.state.params;
-    const formatedPrice = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(product.price);
-    const added = this.checkIsAdded(categoryID, product.id, this.props.cart.data);
+    const { mixedID, product } = this.props.navigation.state.params;
+    const formatedPrice = Platform.OS === 'ios'
+      ? new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(product.price)
+      : `R$${product.price.toFixed(2)}`;
 
-    // console.tron.log(this.props.cart.data);
+    const added = this.checkIsAdded(mixedID, this.props.cart.data);
 
     return (
       <View style={styles.container}>
@@ -95,9 +96,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addToCart: (categoryID, productID) => dispatch(CartActions.cartAddToCart(categoryID, productID)),
-  removeFromCart: (categoryID, productID) =>
-    dispatch(CartActions.cartRemoveFromCart(categoryID, productID)),
+  addToCart: (id, product) =>
+    dispatch(CartActions.cartAddToCart(id, product)),
+  removeFromCart: id =>
+    dispatch(CartActions.cartRemoveFromCart(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Detail);

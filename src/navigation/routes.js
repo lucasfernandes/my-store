@@ -19,7 +19,7 @@ const Routes = TabNavigator({
 }, {
   swipeEnabled: false,
   animationEnabled: false,
-  lazy: true,
+  lazy: false,
   tabBarPosition: 'bottom',
   tabBarComponent: Footer,
 });

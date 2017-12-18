@@ -3,8 +3,7 @@ import { colors, fonts } from 'styles';
 
 const styles = StyleSheet.create({
   amountContainer: {
-    flex: 1,
-    minHeight: 100,
+    height: 100,
     backgroundColor: colors.white,
     borderColor: colors.morning,
     borderTopWidth: StyleSheet.hairlineWidth,

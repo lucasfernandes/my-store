@@ -17,7 +17,7 @@ const Products = props => (
     { props.products.map(product => (
       <ProductComponent
         key={product.id}
-        categoryID={props.categoryID}
+        mixedID={`#${props.categoryID}@${product.id}`}
         product={product}
       />
     ))}

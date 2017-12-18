@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
-import { colors } from 'styles';
+import { colors, metrics } from 'styles';
 
 const styles = StyleSheet.create({
   tabItem: {
     flex: 1,
+    height: metrics.tabBarHeight,
+    justifyContent: 'center',
     alignItems: 'center',
   },
 
@@ -14,7 +16,6 @@ const styles = StyleSheet.create({
   inactiveIcon: {
     color: colors.gray,
   },
-
 });
 
 export default styles;
