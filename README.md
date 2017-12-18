@@ -1,5 +1,5 @@
 # my-store
-An e-Commerce store made with React Native
+An e-Commerce made with React Native
 
 [RN My Store VÍDEO DEMO](https://photos.google.com/share/AF1QipPpxY603_XXTVlvztWhggg4rk88sUlizCPXVva86oK6M-X51uQNJhBnFReLboiaTA/photo/AF1QipNuH61l5CxXhweM49Fw97wsDuak20-qXETH2FBw?key=VF8teTIyOFN6TUhDbU1vQlgzaFQ0VmtFWXNEcjdR "RN My Store VÍDEO DEMO")
 
