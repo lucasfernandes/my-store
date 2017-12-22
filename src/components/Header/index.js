@@ -27,6 +27,8 @@ class Header extends Component {
   navigateBack = () => {
     const { dispatch } = this.props;
 
+    // console.log(dispatch(NavigationActions.back()));
+
     return dispatch(NavigationActions.back());
   }
 
