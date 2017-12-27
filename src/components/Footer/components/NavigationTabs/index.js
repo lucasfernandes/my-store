@@ -18,7 +18,7 @@ const tabs = [
 ];
 
 const NavigationTabs = props => (
-  <View style={styles.tabBar}>
+  <View id="navigationTabs" style={styles.tabBar}>
     { tabs.map(tab => (
       <TabItem
         key={tab.index}

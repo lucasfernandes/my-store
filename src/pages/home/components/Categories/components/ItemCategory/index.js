@@ -30,13 +30,21 @@ export class ItemCategory extends Component {
 
   render() {
     const { category: { id, title }, active } = this.props;
+    const categoryActive = active ? styles['category-active'] : {};
+    const titleActive = active ? styles['title-active'] : {};
+
     return (
-      <View style={[styles.category, active ? styles['category-active'] : {}]}>
+      <View style={[styles.category, categoryActive]}>
         <TouchableOpacity
           onPress={() => this.setActiveCategory(id)}
           style={styles.button}
         >
-          <Text style={[styles.title, active ? styles['title-active'] : {}]}>{title.toUpperCase()}</Text>
+          <Text
+            className={active ? 'title-active' : ''}
+            style={[styles.title, titleActive]}
+          >
+            {title.toUpperCase()}
+          </Text>
         </TouchableOpacity>
       </View>
     );
