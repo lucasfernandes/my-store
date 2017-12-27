@@ -7,10 +7,11 @@ import configureStore from 'redux-mock-store';
 // import CategoryProductsActions from 'store/ducks/categoryProducts';
 
 import { TouchableOpacity, Text, Platform } from 'react-native';
-import ProductComponent, { Product } from 'pages/home/components/Products/components/Product';
+import ProductComponent from 'pages/home/components/Products/components/Product';
 // import styles from 'pages/home/components/Products/components/Product/styles';
 
 const initialState = {
+  mixedID: '#1@1',
   product: {
     id: 1,
     name: 'Camiseta Hyperas Preta',
@@ -26,6 +27,7 @@ describe('Testing Product', () => {
   const store = mockStore(initialState);
   const createWrapper = () => shallow(
     <ProductComponent
+      mixedID={initialState.mixedID}
       product={initialState.product}
     />,
     { context: { store } },
