@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/store/ducks/categories.js</title>
+    <title>Code coverage report for src/pages/cart/index.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,32 +16,32 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/store/ducks</a> categories.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/pages/cart</a> index.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">63.64% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/11</span>
+        <span class='fraction'>7/7</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>6/6</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -85,22 +85,7 @@
 40
 41
 42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+43</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -111,7 +96,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -120,88 +116,59 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createActions, createReducer } from 'reduxsauce';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* Core */
+import React from 'react';
+import PropTypes from 'prop-types';
 &nbsp;
-/* Types &amp; Creators */
+/* Presentational */
+import { View, Text } from 'react-native';
+import Header from 'components/Header';
 &nbsp;
-const { Types, Creators } = createActions({
-  categoriesRequest: null,
-  categoriesSuccess: ['data'],
-  categoriesFailure: null,
-  categoriesSetActiveCategory: ['data'],
-});
+/* Redux */
+import { connect } from 'react-redux';
 &nbsp;
-export { Types };
-export default Creators;
+import CartList from './components/CartList';
+import Amount from './components/Amount';
+import styles from './styles';
 &nbsp;
-/* Initial State */
-const INITIAL_STATE = {
-  data: [],
-  loading: false,
-  active: 1,
-  error: false,
+const renderEmpty = () =&gt; (
+  &lt;Text style={styles.empty}&gt;
+    Adicione um produto a sua lista de compras.
+  &lt;/Text&gt;
+);
+&nbsp;
+const Cart = props =&gt; (
+  &lt;View style={styles.container}&gt;
+    &lt;Header title="Carrinho" /&gt;
+    &lt;CartList cartList={props.cart.data} /&gt;
+    { props.cart.data.length &gt; 0
+      ? &lt;Amount /&gt;
+      : renderEmpty()}
+  &lt;/View&gt;
+);
+&nbsp;
+Cart.propTypes = {
+  cart: PropTypes.shape({
+    data: CartList.propTypes.cartListItem,
+  }).isRequired,
 };
 &nbsp;
-/* Reducers */
-&nbsp;
-export const request = <span class="fstat-no" title="function not covered" >st</span>ate =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
-  ...state,
-  loading: true,
+const mapStateToProps = state =&gt; ({
+  cart: state.cart,
 });
 &nbsp;
-export const success = <span class="fstat-no" title="function not covered" >(s</span>tate, action) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
-  ...state,
-  data: action.data,
-  loading: false,
-  error: false,
-});
-&nbsp;
-export const failure = <span class="fstat-no" title="function not covered" >()</span> =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
-  data: [],
-  loading: false,
-  error: true,
-});
-&nbsp;
-export const setActiveCategory = <span class="fstat-no" title="function not covered" >(s</span>tate, action) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
-  ...state,
-  active: action.data,
-});
-&nbsp;
-export const reducer = createReducer(INITIAL_STATE, {
-  [Types.CATEGORIES_REQUEST]: request,
-  [Types.CATEGORIES_SUCCESS]: success,
-  [Types.CATEGORIES_FAILURE]: failure,
-  [Types.CATEGORIES_SET_ACTIVE_CATEGORY]: setActiveCategory,
-});
+export default connect(mapStateToProps)(Cart);
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

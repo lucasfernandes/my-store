@@ -13,7 +13,7 @@ import styles from './styles';
 
 const Amount = props => (
   <View style={styles.amountContainer}>
-    <Text style={styles.sub}>Subtotal</Text>
+    <Text id="subtotal" style={styles.sub}>Subtotal</Text>
     <Text style={styles.price}>
       {
         Platform.OS === 'ios'
