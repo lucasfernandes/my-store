@@ -35,8 +35,8 @@ class Detail extends Component {
 
   toogleItemCart = () => {
     const { mixedID, product } = this.props.navigation.state.params;
-
     const added = this.checkIsAdded(mixedID, this.props.cart.data);
+
     if (added) {
       this.props.removeFromCart(mixedID);
     } else {
@@ -60,11 +60,7 @@ class Detail extends Component {
       <View style={styles.container}>
         <Header title="Detalhes" backEnabled />
 
-        <View
-          style={styles.productContainer}
-          onPress={() => this.navigateToDetail(product)}
-          activeOpacity={0.6}
-        >
+        <View style={styles.productContainer}>
           <Image
             style={styles.image}
             source={{ uri: product.image }}
@@ -82,6 +78,7 @@ class Detail extends Component {
             color={added ? 'red' : 'green'}
             onPress={this.toogleItemCart}
             style={styles.button}
+            id="button"
           >
             {added ? 'Remover do carinho' : 'Adicionar ao carrinho'}
           </Button>
