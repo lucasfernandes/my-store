@@ -28,6 +28,7 @@ const fullState = {
           image: 'https://t-static.dafiti.com.br/czCvp3wBNPfehf7omYZfJacnxPY=/fit-in/427x620/dafitistatic-a.akamaihd.net%2fp%2fquiksilver-camiseta-quiksilver-hyperas-preta-8710-7136243-1-product.jpg',
           price: 49.99,
         },
+        amount: 1,
       },
     ],
     loading: false,
@@ -58,7 +59,6 @@ describe('Testing Cart', () => {
       .first())
       .toEqual(amountWrapper);
 
-    // console.log(wrapper.props());
-    // console.log(amountWrapper.props());
+    expect(amountWrapper.prop('price')).toEqual(fullState.cart.data[0].product.price * fullState.cart.data[0].amount);
   });
 });
