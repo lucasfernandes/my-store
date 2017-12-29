@@ -3,20 +3,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 
-import Cart from 'pages/cart';
 import Amount from 'pages/cart/components/Amount';
+// import { ItemCategory } from 'pages/home/components/Categories/components/ItemCategory';
 
 const initialState = {
-  cart: {
-    data: [],
-    loading: false,
-    added: false,
-    error: false,
-    badges: 0,
-  },
-};
-
-const fullState = {
   cart: {
     data: [
       {
@@ -35,30 +25,26 @@ const fullState = {
     error: false,
     badges: 0,
   },
+  price: 100.00,
 };
 
 const mockStore = configureStore([]);
 
-describe('Testing Cart', () => {
-  const store = mockStore(initialState);
-
-  it('render empty', () => {
-    const wrapper = shallow(<Cart />, { context: { store } });
-
-    expect(wrapper.dive().children().last().children()
-      .text()).toEqual('Adicione um produto a sua lista de compras.');
-  });
+describe('Testing Amount', () => {
+  // const store = mockStore(initialState);
 
   it('render as expected', () => {
-    const newStore = mockStore(fullState);
-    const wrapper = shallow(<Cart />, { context: { store: newStore } });
-    const amountWrapper = shallow(<Amount />, { context: { store: newStore } });
+    // const wrapper = shallow(
+    //   <Amount />,
+    //   { context: { store } },
+    // );
 
-    expect(wrapper.dive().children().last().dive()
-      .first())
-      .toEqual(amountWrapper);
-
+    // console.log(wrapper.dive().children().last().children().text());
     // console.log(wrapper.props());
-    // console.log(amountWrapper.props());
+    // console.log(store.getActions());
+    // expect(wrapper.find(ScrollView).children()).toHaveLength(6);
+    // expect(wrapper.find(ScrollView).children().first().dive()
+    //   .first()
+    //   .name()).toEqual('ItemCategory');
   });
 });
