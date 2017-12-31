@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">45.45% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/11</span>
+        <span class='fraction'>11/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">55.56% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/9</span>
+        <span class='fraction'>9/9</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -112,24 +112,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -142,14 +133,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -172,14 +172,14 @@ const tabs = [
   { index: 1, icon: 'shopping-cart' },
 ];
 &nbsp;
-const NavigationTabs = <span class="fstat-no" title="function not covered" >pr</span>ops =&gt; (
-<span class="cstat-no" title="statement not covered" >  &lt;View id="navigationTabs" style={styles.tabBar}&gt;</span>
-    { tabs.map(<span class="fstat-no" title="function not covered" >ta</span>b =&gt; (
-<span class="cstat-no" title="statement not covered" >      &lt;TabItem</span>
+const NavigationTabs = props =&gt; (
+  &lt;View id="navigationTabs" style={styles.tabBar}&gt;
+    { tabs.map(tab =&gt; (
+      &lt;TabItem
         key={tab.index}
         icon={tab.icon}
         active={(tab.index === props.navigationState.index)}
-        onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >[</span>
+        onPress={() =&gt; [
           props.jumpToIndex(tab.index),
           tab.index === 1 &amp;&amp; props.resetBadges()]}
         badges={tab.index === 1 ? props.cart.badges : 0}
@@ -199,12 +199,12 @@ NavigationTabs.propTypes = {
   }).isRequired,
 };
 &nbsp;
-const mapStateToProps = <span class="fstat-no" title="function not covered" >st</span>ate =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+const mapStateToProps = state =&gt; ({
   cart: state.cart,
 });
 &nbsp;
-const mapDispatchToProps = <span class="fstat-no" title="function not covered" >di</span>spatch =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
-  resetBadges: <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >dispatch(CartActions.cartResetBadges()),</span>
+const mapDispatchToProps = dispatch =&gt; ({
+  resetBadges: () =&gt; dispatch(CartActions.cartResetBadges()),
 });
 &nbsp;
 export default connect(mapStateToProps, mapDispatchToProps)(NavigationTabs);
@@ -214,7 +214,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(NavigationTabs);
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 29 2017 14:27:28 GMT-0200 (-02)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Dec 30 2017 22:56:54 GMT-0200 (-02)
 </div>
 </div>
 <script src="../../../../../prettify.js"></script>
