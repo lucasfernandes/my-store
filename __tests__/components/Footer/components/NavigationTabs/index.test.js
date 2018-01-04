@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import configureStore from 'redux-mock-store';
 
 import NavigationTabs from 'components/Footer/components/NavigationTabs';
-import CartActions from 'store/ducks//cart';
+import CartActions from 'store/ducks/cart';
 
 const props = {
   layout: {

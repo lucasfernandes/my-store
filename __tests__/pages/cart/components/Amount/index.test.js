@@ -4,7 +4,6 @@ import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 
 import Amount from 'pages/cart/components/Amount';
-// import { ItemCategory } from 'pages/home/components/Categories/components/ItemCategory';
 
 import { Platform } from 'react-native';
 

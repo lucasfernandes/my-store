@@ -5,7 +5,7 @@ export default (rootReducer, rootSaga) => {
   const middleware = [];
   const enhancers = [];
 
-  // /* Saga */
+  /* Saga */
   const sagaMonitor = __DEV__ ? console.tron.createSagaMonitor() : null;
   const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
   middleware.push(sagaMiddleware);

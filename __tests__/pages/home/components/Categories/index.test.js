@@ -5,7 +5,6 @@ import configureStore from 'redux-mock-store';
 
 import { ScrollView } from 'react-native';
 import Categories from 'pages/home/components/Categories';
-// import { ItemCategory } from 'pages/home/components/Categories/components/ItemCategory';
 
 const initialState = {
   categories: {
@@ -49,7 +48,6 @@ describe('Testing Categories', () => {
   it('render map list', () => {
     const wrapper = shallow(
       <Categories
-        // active={initialState.categories.active}
         categories={initialState.categories.data}
       />,
       { context: { store } },

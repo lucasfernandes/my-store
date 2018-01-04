@@ -4,11 +4,9 @@ import { NavigationActions } from 'react-navigation';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import configureStore from 'redux-mock-store';
-// import CategoryProductsActions from 'store/ducks/categoryProducts';
 
 import { TouchableOpacity, Text, Platform } from 'react-native';
 import ProductComponent from 'pages/home/components/Products/components/Product';
-// import styles from 'pages/home/components/Products/components/Product/styles';
 
 const initialState = {
   mixedID: '#1@1',

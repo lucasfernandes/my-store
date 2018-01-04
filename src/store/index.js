@@ -14,7 +14,6 @@ import configurePersistor from './configurePersistor';
 const rootReducer = persistCombineReducers({
   key: 'root',
   storage,
-  // blacklist: ['categoryProducts'],
 }, {
   nav: navReducer,
   categories,
