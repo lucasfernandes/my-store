@@ -47,17 +47,17 @@ const mockStore = configureStore([]);
 describe('Testing Categories', () => {
   let store = mockStore(initialState);
 
-  const createWrapper = active => shallow(
+  const createWrapper = (category, active) => shallow(
     <ItemCategoryComponent
-      category={initialState.categories.data[0]}
-      active={active}
+      category={category}
+      active={(category.id === active)}
     />,
     { context: { store } },
   );
 
   it('render as expected', () => {
     store = mockStore(initialState);
-    const wrapper = createWrapper(initialState.categories.active);
+    const wrapper = createWrapper(initialState.categories.data[0], 1);
 
     expect(wrapper.dive().find(TouchableOpacity)).toHaveLength(1);
     expect(wrapper.dive().find(Text).prop('children'))
@@ -66,7 +66,7 @@ describe('Testing Categories', () => {
 
   it('set active category and request its products', () => {
     store = mockStore(initialState);
-    const wrapper = createWrapper(initialState.categories.active);
+    const wrapper = createWrapper(initialState.categories.data[0], 1);
 
     expect(wrapper.dive().find(TouchableOpacity)).toHaveLength(1);
 
@@ -78,14 +78,13 @@ describe('Testing Categories', () => {
 
   it('should toogle between active items', () => {
     store = mockStore(initialState);
-    const active = false;
-    const wrapper = createWrapper(active);
+    const wrapper = createWrapper(initialState.categories.data[0], 2);
 
     expect(wrapper.prop('active')).toBe(false);
     expect(wrapper.dive().find(Text).hasClass('title-active')).toBe(false);
 
-    wrapper.setProps({ active: true });
-    expect(wrapper.prop('active')).toBe(true);
-    expect(wrapper.dive().find(Text).hasClass('title-active')).toBe(true);
+    const wrapperActive = createWrapper(initialState.categories.data[0], 1);
+    expect(wrapperActive.prop('active')).toBe(true);
+    expect(wrapperActive.dive().find(Text).hasClass('title-active')).toBe(true);
   });
 });

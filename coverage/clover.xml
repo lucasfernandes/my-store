@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1515028988674" clover="3.2.0">
-  <project timestamp="1515028988674" name="All files">
-    <metrics statements="151" coveredstatements="143" conditionals="52" coveredconditionals="43" methods="71" coveredmethods="61" elements="274" coveredelements="247" complexity="0" loc="151" ncloc="151" packages="21" files="44" classes="44">
-      <package name="__tests__">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="setup.js" path="/Users/skeletor/Projects/Mobile/my-store/__tests__/setup.js">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="4" count="18" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.components.Footer">
+<coverage generated="1515090985895" clover="3.2.0">
+  <project timestamp="1515090985895" name="All files">
+    <metrics statements="147" coveredstatements="147" conditionals="46" coveredconditionals="46" methods="71" coveredmethods="71" elements="264" coveredelements="264" complexity="0" loc="147" ncloc="147" packages="18" files="37" classes="37">
+      <package name="components.Footer">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/components/Footer/index.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -17,7 +10,7 @@
           <line num="9" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="src.components.Footer.components.NavigationTabs">
+      <package name="components.Footer.components.NavigationTabs">
         <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/components/Footer/components/NavigationTabs/index.js">
           <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
@@ -36,7 +29,7 @@
           <line num="4" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="src.components.Footer.components.NavigationTabs.components.TabItem">
+      <package name="components.Footer.components.NavigationTabs.components.TabItem">
         <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/components/Footer/components/NavigationTabs/components/TabItem/index.js">
           <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -50,7 +43,7 @@
           <line num="4" count="3" type="stmt"/>
         </file>
       </package>
-      <package name="src.components.Footer.components.NavigationTabs.components.TabItem.components.Badge">
+      <package name="components.Footer.components.NavigationTabs.components.TabItem.components.Badge">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/components/Footer/components/NavigationTabs/components/TabItem/components/Badge/index.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -64,7 +57,7 @@
           <line num="4" count="4" type="stmt"/>
         </file>
       </package>
-      <package name="src.components.Header">
+      <package name="components.Header">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/components/Header/index.js">
           <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -77,7 +70,7 @@
           <line num="4" count="4" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.cart">
+      <package name="pages.cart">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/cart/index.js">
           <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
@@ -93,7 +86,7 @@
           <line num="4" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.cart.components.Amount">
+      <package name="pages.cart.components.Amount">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/cart/components/Amount/index.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -107,7 +100,7 @@
           <line num="4" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.cart.components.CartList">
+      <package name="pages.cart.components.CartList">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/cart/components/CartList/index.js">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -122,7 +115,7 @@
           <line num="4" count="3" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.cart.components.CartList.components.CartListItem">
+      <package name="pages.cart.components.CartList.components.CartListItem">
         <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/cart/components/CartList/components/CartListItem/index.js">
           <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
@@ -140,7 +133,7 @@
           <line num="4" count="4" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.detail">
+      <package name="pages.detail">
         <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="8"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/detail/index.js">
           <metrics statements="14" coveredstatements="14" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="8"/>
@@ -164,7 +157,7 @@
           <line num="4" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.detail.components.Button">
+      <package name="pages.detail.components.Button">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/detail/components/Button/index.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -178,7 +171,7 @@
           <line num="4" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.home">
+      <package name="pages.home">
         <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/home/index.js">
           <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
@@ -197,7 +190,7 @@
           <line num="4" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.home.components.Categories">
+      <package name="pages.home.components.Categories">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/home/components/Categories/index.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -209,7 +202,7 @@
           <line num="4" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.home.components.Categories.components.ItemCategory">
+      <package name="pages.home.components.Categories.components.ItemCategory">
         <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/home/components/Categories/components/ItemCategory/index.js">
           <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
@@ -220,7 +213,7 @@
           <line num="34" count="6" type="cond" truecount="2" falsecount="0"/>
           <line num="36" count="6" type="stmt"/>
           <line num="39" count="1" type="stmt"/>
-          <line num="54" count="4" type="stmt"/>
+          <line num="54" count="5" type="stmt"/>
           <line num="55" count="1" type="stmt"/>
           <line num="57" count="1" type="stmt"/>
         </file>
@@ -229,7 +222,7 @@
           <line num="4" count="3" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.home.components.Products">
+      <package name="pages.home.components.Products">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/home/components/Products/index.js">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -244,7 +237,7 @@
           <line num="4" count="2" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages.home.components.Products.components.Product">
+      <package name="pages.home.components.Products.components.Product">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/pages/home/components/Products/components/Product/index.js">
           <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
@@ -260,55 +253,48 @@
           <line num="4" count="4" type="stmt"/>
         </file>
       </package>
-      <package name="src.services">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="api.js" path="/Users/skeletor/Projects/Mobile/my-store/src/services/api.js">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="3" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.store.ducks">
-        <metrics statements="28" coveredstatements="24" conditionals="4" coveredconditionals="0" methods="16" coveredmethods="7"/>
+      <package name="store.ducks">
+        <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="4" methods="16" coveredmethods="16"/>
         <file name="cart.js" path="/Users/skeletor/Projects/Mobile/my-store/src/store/ducks/cart.js">
-          <metrics statements="15" coveredstatements="11" conditionals="4" coveredconditionals="0" methods="9" coveredmethods="3"/>
-          <line num="6" count="7" type="stmt"/>
-          <line num="17" count="7" type="stmt"/>
-          <line num="27" count="7" type="stmt"/>
-          <line num="40" count="7" type="stmt"/>
-          <line num="42" count="0" type="stmt"/>
-          <line num="46" count="7" type="stmt"/>
-          <line num="49" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="50" count="0" type="stmt"/>
-          <line num="52" count="0" type="stmt"/>
-          <line num="56" count="7" type="stmt"/>
-          <line num="61" count="7" type="stmt"/>
-          <line num="70" count="7" type="stmt"/>
-          <line num="72" count="7" type="stmt"/>
+          <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="9"/>
+          <line num="6" count="8" type="stmt"/>
+          <line num="17" count="8" type="stmt"/>
+          <line num="27" count="8" type="stmt"/>
+          <line num="40" count="8" type="stmt"/>
+          <line num="42" count="3" type="stmt"/>
+          <line num="46" count="8" type="stmt"/>
+          <line num="49" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="56" count="8" type="stmt"/>
+          <line num="61" count="8" type="stmt"/>
+          <line num="70" count="8" type="stmt"/>
+          <line num="72" count="8" type="stmt"/>
           <line num="74" count="2" type="stmt"/>
           <line num="75" count="2" type="stmt"/>
         </file>
         <file name="categories.js" path="/Users/skeletor/Projects/Mobile/my-store/src/store/ducks/categories.js">
           <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-          <line num="5" count="5" type="stmt"/>
-          <line num="16" count="5" type="stmt"/>
-          <line num="25" count="5" type="stmt"/>
-          <line num="30" count="5" type="stmt"/>
-          <line num="37" count="5" type="stmt"/>
-          <line num="43" count="5" type="stmt"/>
-          <line num="48" count="5" type="stmt"/>
+          <line num="5" count="6" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
+          <line num="25" count="6" type="stmt"/>
+          <line num="30" count="6" type="stmt"/>
+          <line num="37" count="6" type="stmt"/>
+          <line num="43" count="6" type="stmt"/>
+          <line num="48" count="6" type="stmt"/>
         </file>
         <file name="categoryProducts.js" path="/Users/skeletor/Projects/Mobile/my-store/src/store/ducks/categoryProducts.js">
-          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="5" count="4" type="stmt"/>
-          <line num="15" count="4" type="stmt"/>
-          <line num="23" count="4" type="stmt"/>
-          <line num="28" count="4" type="stmt"/>
-          <line num="34" count="4" type="stmt"/>
-          <line num="40" count="4" type="stmt"/>
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="5" count="6" type="stmt"/>
+          <line num="15" count="6" type="stmt"/>
+          <line num="23" count="6" type="stmt"/>
+          <line num="28" count="6" type="stmt"/>
+          <line num="34" count="6" type="stmt"/>
+          <line num="40" count="6" type="stmt"/>
         </file>
       </package>
-      <package name="src.store.sagas">
-        <metrics statements="9" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="2"/>
+      <package name="store.sagas">
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <file name="categories.js" path="/Users/skeletor/Projects/Mobile/my-store/src/store/sagas/categories.js">
           <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
           <line num="7" count="2" type="stmt"/>
@@ -317,35 +303,15 @@
           <line num="12" count="1" type="stmt"/>
         </file>
         <file name="categoryProducts.js" path="/Users/skeletor/Projects/Mobile/my-store/src/store/sagas/categoryProducts.js">
-          <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="10" count="0" type="stmt"/>
-          <line num="12" count="0" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
         </file>
         <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/store/sagas/index.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="12" count="2" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.styles">
-        <metrics statements="2" coveredstatements="2" conditionals="6" coveredconditionals="3" methods="0" coveredmethods="0"/>
-        <file name="colors.js" path="/Users/skeletor/Projects/Mobile/my-store/src/styles/colors.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-        <file name="fonts.js" path="/Users/skeletor/Projects/Mobile/my-store/src/styles/fonts.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-        <file name="general.js" path="/Users/skeletor/Projects/Mobile/my-store/src/styles/general.js">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="3" count="16" type="stmt"/>
-        </file>
-        <file name="index.js" path="/Users/skeletor/Projects/Mobile/my-store/src/styles/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-        <file name="metrics.js" path="/Users/skeletor/Projects/Mobile/my-store/src/styles/metrics.js">
-          <metrics statements="1" coveredstatements="1" conditionals="6" coveredconditionals="3" methods="0" coveredmethods="0"/>
-          <line num="3" count="16" type="stmt"/>
+          <line num="12" count="4" type="stmt"/>
         </file>
       </package>
     </metrics>

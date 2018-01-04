@@ -55,6 +55,12 @@
     ],
     "testMatch": [
       "<rootDir>/__tests__/**/?(*.)(spec|test).js"
+    ],
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}",
+      "src/pages/**/*.{js,jsx}",
+      "src/store/ducks/**/*.{js,jsx}",
+      "src/store/sagas/**/*.{js,jsx}"
     ]
   }
 }
